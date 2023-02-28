@@ -9,10 +9,10 @@ import UIKit
 
 class ImageLoadViewModel {
     
-    let updateHandler: ((UIImage?) -> Void)
+    var updateHandler: ((UIImage?) -> Void)?
+    let defaultImage = UIImage(systemName: "photo.fill")
     
     private let imageURL: URL
-    private let defaultImage = UIImage(systemName: "photo.fill")
     
     private lazy var downloader: ImageDownloader = {
         let downloader = ImageDownloader(url: imageURL)
@@ -20,11 +20,7 @@ class ImageLoadViewModel {
         return downloader
     }()
     
-    init(
-        updateHandler: @escaping (UIImage?) -> Void,
-        imageURL: URL)
-    {
-        self.updateHandler = updateHandler
+    init(imageURL: URL) {
         self.imageURL = imageURL
     }
     
@@ -38,7 +34,7 @@ extension ImageLoadViewModel: ImageDownloaderDelegate {
     
     func downloadTaskCompleted(result: UIImage?) {
         DispatchQueue.main.async { [weak self] in
-            self?.updateHandler(result)
+            self?.updateHandler?(result)
         }
     }
     
