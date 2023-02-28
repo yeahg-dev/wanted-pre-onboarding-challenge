@@ -13,6 +13,8 @@
 		6372304729ADD00C003A941F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6372304529ADD00C003A941F /* Main.storyboard */; };
 		6372304929ADD00E003A941F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6372304829ADD00E003A941F /* Assets.xcassets */; };
 		6372304C29ADD00E003A941F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6372304A29ADD00E003A941F /* LaunchScreen.storyboard */; };
+		6372305829ADEA77003A941F /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6372305729ADEA77003A941F /* ImageDownloader.swift */; };
+		6372305A29ADEB9F003A941F /* ImageDownloaderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6372305929ADEB9F003A941F /* ImageDownloaderDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		6372304829ADD00E003A941F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6372304B29ADD00E003A941F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6372304D29ADD00E003A941F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6372305729ADEA77003A941F /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		6372305929ADEB9F003A941F /* ImageDownloaderDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +60,12 @@
 		6372303E29ADD00C003A941F /* ConcurrencyImageDownloader */ = {
 			isa = PBXGroup;
 			children = (
+				6372304D29ADD00E003A941F /* Info.plist */,
 				6372305529ADE9C5003A941F /* Resource */,
 				6372305329ADE99E003A941F /* App */,
 				6372305429ADE9B4003A941F /* View */,
-				6372304D29ADD00E003A941F /* Info.plist */,
+				6372305729ADEA77003A941F /* ImageDownloader.swift */,
+				6372305929ADEB9F003A941F /* ImageDownloaderDelegate.swift */,
 			);
 			path = ConcurrencyImageDownloader;
 			sourceTree = "<group>";
@@ -170,8 +176,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6372305A29ADEB9F003A941F /* ImageDownloaderDelegate.swift in Sources */,
 				6372304429ADD00C003A941F /* ViewController.swift in Sources */,
 				6372304029ADD00C003A941F /* AppDelegate.swift in Sources */,
+				6372305829ADEA77003A941F /* ImageDownloader.swift in Sources */,
 				6372304229ADD00C003A941F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
