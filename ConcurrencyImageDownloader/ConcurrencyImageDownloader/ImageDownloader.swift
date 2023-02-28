@@ -10,7 +10,6 @@ import UIKit
 class ImageDownloader: NSObject {
     
     let imageURL: URL
-    var progress: Progress?
     var delegate: ImageDownloaderDelegate?
     
     private var downloadTask: URLSessionDownloadTask?
@@ -25,10 +24,11 @@ class ImageDownloader: NSObject {
         super.init()
     }
     
-    func startDownload() {
+    func startDownload() -> Progress? {
         let downloadTask = session.downloadTask(with: imageURL)
         downloadTask.resume()
         self.downloadTask = downloadTask
+        return downloadTask.progress
     }
     
 }
