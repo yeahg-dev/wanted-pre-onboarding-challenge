@@ -56,15 +56,47 @@
 		6372303E29ADD00C003A941F /* ConcurrencyImageDownloader */ = {
 			isa = PBXGroup;
 			children = (
-				6372303F29ADD00C003A941F /* AppDelegate.swift */,
-				6372304129ADD00C003A941F /* SceneDelegate.swift */,
-				6372304329ADD00C003A941F /* ViewController.swift */,
-				6372304529ADD00C003A941F /* Main.storyboard */,
-				6372304829ADD00E003A941F /* Assets.xcassets */,
-				6372304A29ADD00E003A941F /* LaunchScreen.storyboard */,
+				6372305529ADE9C5003A941F /* Resource */,
+				6372305329ADE99E003A941F /* App */,
+				6372305429ADE9B4003A941F /* View */,
 				6372304D29ADD00E003A941F /* Info.plist */,
 			);
 			path = ConcurrencyImageDownloader;
+			sourceTree = "<group>";
+		};
+		6372305329ADE99E003A941F /* App */ = {
+			isa = PBXGroup;
+			children = (
+				6372303F29ADD00C003A941F /* AppDelegate.swift */,
+				6372304129ADD00C003A941F /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		6372305429ADE9B4003A941F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6372304329ADD00C003A941F /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6372305529ADE9C5003A941F /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				6372304829ADD00E003A941F /* Assets.xcassets */,
+				6372305629ADE9CE003A941F /* Storyboard */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		6372305629ADE9CE003A941F /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				6372304529ADD00C003A941F /* Main.storyboard */,
+				6372304A29ADD00E003A941F /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
