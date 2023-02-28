@@ -56,7 +56,7 @@ class ImageLoadView: UIView {
     }
     
     @objc
-    private func loadButtonDidTapped() {
+    func loadButtonDidTapped() {
         imageView.image = viewModel.defaultImage
         progressView.observedProgress = viewModel.startLoadImage()
     }

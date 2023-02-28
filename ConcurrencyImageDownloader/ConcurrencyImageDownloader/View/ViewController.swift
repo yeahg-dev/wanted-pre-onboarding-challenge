@@ -9,10 +9,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // stackView
+    
+    // loadAllButton
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    
+    // loadAllButtonDidTapped
 
 
 }
