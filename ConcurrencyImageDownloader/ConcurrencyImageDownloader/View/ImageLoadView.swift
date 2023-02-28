@@ -22,7 +22,7 @@ class ImageLoadView: UIView {
         let progressView = UIProgressView()
         progressView.translatesAutoresizingMaskIntoConstraints = false
         progressView.trackTintColor = .systemGray
-        progressView.progressTintColor = .green
+        progressView.progressTintColor = .systemYellow
         return progressView
     }()
     
@@ -30,11 +30,12 @@ class ImageLoadView: UIView {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Load", for: .normal)
-        button.backgroundColor = .green
+        button.backgroundColor = Design.loadButtonColor
         button.addTarget(
             self,
             action: #selector(loadButtonDidTapped),
             for: .touchDown)
+        button.layer.cornerRadius = 8
         return button
     }()
     
@@ -116,9 +117,11 @@ class ImageLoadView: UIView {
 
 private enum Design {
     
+    static let loadButtonColor: UIColor = .systemYellow
+    
     static let imageViewWidthMultiplier: CGFloat = 0.3
     static let imageViewHeightMultiplier: CGFloat = 1.0
-    static let loadButtonWidth: CGFloat = 100
+    static let loadButtonWidth: CGFloat = 80
     static let loadButtonHeight: CGFloat = 40
     
     static let padding: CGFloat = 10

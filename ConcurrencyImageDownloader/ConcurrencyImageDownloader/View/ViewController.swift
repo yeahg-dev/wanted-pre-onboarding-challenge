@@ -40,6 +40,7 @@ class ViewController: UIViewController {
             self,
             action: #selector(loadAllButtonDidTapped),
             for: .touchDown)
+        button.layer.cornerRadius = 7
         return button
     }()
     
@@ -94,7 +95,7 @@ private enum Design {
     static let loadAllButtonColor: UIColor = .systemYellow
     
     static let loadAllButtonHeight: CGFloat = 60
-    static let loadAllButtonWidth: CGFloat = 200
+    static let loadAllButtonWidth: CGFloat = 230
     static let stackViewHeightMultiplier: CGFloat = 0.7
     
     static let paddingLeading: CGFloat = 20
