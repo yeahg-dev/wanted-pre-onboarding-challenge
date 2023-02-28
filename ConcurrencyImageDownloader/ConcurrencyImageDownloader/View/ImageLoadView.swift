@@ -14,14 +14,14 @@ class ImageLoadView: UIView {
     private let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.contentMode = .scaleAspectFill
+        imageView.contentMode = .scaleAspectFit
         return imageView
     }()
     
     private let progressView: UIProgressView = {
         let progressView = UIProgressView()
         progressView.translatesAutoresizingMaskIntoConstraints = false
-        progressView.trackTintColor = .white
+        progressView.trackTintColor = .systemGray
         progressView.progressTintColor = .green
         return progressView
     }()
@@ -40,7 +40,7 @@ class ImageLoadView: UIView {
     
     init(viewModel: ImageLoadViewModel) {
         self.viewModel = viewModel
-        super.init()
+        super.init(frame: .zero)
         configureLayout()
         bind()
     }
@@ -50,6 +50,7 @@ class ImageLoadView: UIView {
     }
     
     private func bind() {
+        imageView.image = viewModel.defaultImage
         viewModel.updateHandler = { [weak self] image in
             self?.imageView.image = image
         }
