@@ -117,7 +117,7 @@ class ImageLoadView: UIView {
 
 private enum Design {
     
-    static let loadButtonColor: UIColor = .systemYellow
+    static let loadButtonColor: UIColor? = UIColor(named: "lavender")
     
     static let imageViewWidthMultiplier: CGFloat = 0.3
     static let imageViewHeightMultiplier: CGFloat = 1.0

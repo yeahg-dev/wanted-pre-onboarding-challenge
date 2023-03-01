@@ -92,7 +92,7 @@ class ViewController: UIViewController {
 
 private enum Design {
     
-    static let loadAllButtonColor: UIColor = .systemYellow
+    static let loadAllButtonColor: UIColor? = UIColor(named: "lavender")
     
     static let loadAllButtonHeight: CGFloat = 60
     static let loadAllButtonWidth: CGFloat = 230
@@ -100,7 +100,7 @@ private enum Design {
     
     static let paddingLeading: CGFloat = 20
     static let paddingTrailing: CGFloat = 20
-    static let paddingTop: CGFloat = 80
+    static let paddingTop: CGFloat = 100
     static let paddingBottom: CGFloat = 40
     
 }

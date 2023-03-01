@@ -10,7 +10,7 @@ import UIKit
 class ImageLoadViewModel {
     
     var updateHandler: ((UIImage?) -> Void)?
-    let defaultImage = UIImage(systemName: "photo.fill")
+    let defaultImage = UIImage(systemName: "photo.fill")?.withTintColor(.systemGray, renderingMode: .alwaysOriginal)
     
     private let imageURL: URL
     
