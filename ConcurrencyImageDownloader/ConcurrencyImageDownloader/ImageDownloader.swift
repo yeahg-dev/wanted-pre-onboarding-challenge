@@ -45,27 +45,17 @@ extension ImageDownloader: URLSessionDownloadDelegate, URLSessionDelegate {
             print("Type[\(self)] status code 200 아님")
             return
         }
-        
-        do {
-            let documentsURL = try
-            FileManager.default.url(for: .documentDirectory,
-                                    in: .userDomainMask,
-                                    appropriateFor: nil,
-                                    create: false)
-            let savedURL = documentsURL.appendingPathComponent(
-                location.lastPathComponent)
-            
-            let data = try Data(contentsOf: savedURL)
-            
-            guard let image = UIImage(data: data) else {
-                print("Type[\(self)] UIImage 초기화 실패")
-                return
-            }
-            delegate?.downloadTaskCompleted(result: image)
-        } catch {
-            print("Type[\(self)] File System에서 url을 읽어오지 못하거나 Data 초기화 실패")
+
+        guard let data = try? Data(contentsOf: location) else {
+            print("Type[\(self)] data를 읽을 수 없음")
+            return
         }
+        
+        guard let image = UIImage(data: data) else {
+            print("Type[\(self)] UIImage 초기화 실패")
+            return
+        }
+        delegate?.downloadTaskCompleted(result: image)
     }
-    
     
 }
