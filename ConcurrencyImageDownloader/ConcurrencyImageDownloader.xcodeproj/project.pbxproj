@@ -69,11 +69,10 @@
 				6372304D29ADD00E003A941F /* Info.plist */,
 				6372305529ADE9C5003A941F /* Resource */,
 				6372305329ADE99E003A941F /* App */,
+				6372306429AF25C1003A941F /* ImageDownloader */,
 				6372306029AE316E003A941F /* Model */,
 				6372305429ADE9B4003A941F /* View */,
 				6372305B29ADF675003A941F /* ViewModel */,
-				6372305729ADEA77003A941F /* ImageDownloader.swift */,
-				6372305929ADEB9F003A941F /* ImageDownloaderDelegate.swift */,
 			);
 			path = ConcurrencyImageDownloader;
 			sourceTree = "<group>";
@@ -128,6 +127,15 @@
 				6372306129AE318C003A941F /* CuteAnimalURL.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		6372306429AF25C1003A941F /* ImageDownloader */ = {
+			isa = PBXGroup;
+			children = (
+				6372305729ADEA77003A941F /* ImageDownloader.swift */,
+				6372305929ADEB9F003A941F /* ImageDownloaderDelegate.swift */,
+			);
+			path = ImageDownloader;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
