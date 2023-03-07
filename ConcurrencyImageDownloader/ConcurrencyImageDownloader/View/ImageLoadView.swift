@@ -30,6 +30,7 @@ class ImageLoadView: UIView {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Load", for: .normal)
+        button.setTitle("Stop", for: .selected)
         button.backgroundColor = Design.loadButtonColor
         button.addTarget(
             self,
@@ -38,6 +39,8 @@ class ImageLoadView: UIView {
         button.layer.cornerRadius = 8
         return button
     }()
+    
+    private var downloadTask: URLSessionDownloadTask?
     
     init(viewModel: ImageLoadViewModel) {
         self.viewModel = viewModel
@@ -54,13 +57,21 @@ class ImageLoadView: UIView {
         imageView.image = viewModel.defaultImage
         viewModel.updateHandler = { [weak self] image in
             self?.imageView.image = image
+            self?.loadButton.isSelected = false
         }
     }
     
     @objc
     func loadButtonDidTapped() {
-        imageView.image = viewModel.defaultImage
-        progressView.observedProgress = viewModel.startLoadImage()
+        if loadButton.isSelected {
+            downloadTask?.cancel()
+            imageView.image = viewModel.defaultImage
+        } else {
+            let (task, progress) = viewModel.startLoadImage()
+            progressView.observedProgress = progress
+            downloadTask = task
+        }
+        loadButton.isSelected.toggle()
     }
     
     private func configureLayout() {

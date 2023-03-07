@@ -24,7 +24,7 @@ class ImageLoadViewModel {
         self.imageURL = imageURL
     }
     
-    func startLoadImage() -> Progress? {
+    func startLoadImage() -> (URLSessionDownloadTask, Progress?) {
         return downloader.startDownload()
     }
     

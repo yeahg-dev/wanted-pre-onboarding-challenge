@@ -24,11 +24,11 @@ class ImageDownloader: NSObject {
         super.init()
     }
     
-    func startDownload() -> Progress? {
+    func startDownload() -> (URLSessionDownloadTask, Progress?) {
         let downloadTask = session.downloadTask(with: imageURL)
         downloadTask.resume()
         self.downloadTask = downloadTask
-        return downloadTask.progress
+        return (downloadTask, downloadTask.progress)
     }
     
 }
