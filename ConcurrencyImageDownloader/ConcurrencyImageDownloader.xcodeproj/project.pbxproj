@@ -17,7 +17,7 @@
 		6372305A29ADEB9F003A941F /* ImageDownloaderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6372305929ADEB9F003A941F /* ImageDownloaderDelegate.swift */; };
 		6372305D29ADF6B2003A941F /* ImageLoadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6372305C29ADF6B2003A941F /* ImageLoadViewModel.swift */; };
 		6372305F29ADFD7D003A941F /* ImageLoadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6372305E29ADFD7D003A941F /* ImageLoadView.swift */; };
-		6372306229AE318C003A941F /* CuteAnimalURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6372306129AE318C003A941F /* CuteAnimalURL.swift */; };
+		6372306229AE318C003A941F /* ImageURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6372306129AE318C003A941F /* ImageURL.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +33,7 @@
 		6372305929ADEB9F003A941F /* ImageDownloaderDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderDelegate.swift; sourceTree = "<group>"; };
 		6372305C29ADF6B2003A941F /* ImageLoadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoadViewModel.swift; sourceTree = "<group>"; };
 		6372305E29ADFD7D003A941F /* ImageLoadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoadView.swift; sourceTree = "<group>"; };
-		6372306129AE318C003A941F /* CuteAnimalURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuteAnimalURL.swift; sourceTree = "<group>"; };
+		6372306129AE318C003A941F /* ImageURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageURL.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,7 +124,7 @@
 		6372306029AE316E003A941F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				6372306129AE318C003A941F /* CuteAnimalURL.swift */,
+				6372306129AE318C003A941F /* ImageURL.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -210,7 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6372305D29ADF6B2003A941F /* ImageLoadViewModel.swift in Sources */,
-				6372306229AE318C003A941F /* CuteAnimalURL.swift in Sources */,
+				6372306229AE318C003A941F /* ImageURL.swift in Sources */,
 				6372305A29ADEB9F003A941F /* ImageDownloaderDelegate.swift in Sources */,
 				6372304429ADD00C003A941F /* ViewController.swift in Sources */,
 				6372304029ADD00C003A941F /* AppDelegate.swift in Sources */,

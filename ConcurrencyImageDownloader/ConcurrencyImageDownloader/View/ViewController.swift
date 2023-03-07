@@ -10,15 +10,15 @@ import UIKit
 class ViewController: UIViewController {
     
     private let imageLoadView1 = ImageLoadView(
-        viewModel: ImageLoadViewModel(imageURL: CuteAnimalURL.cuteCat))
+        viewModel: ImageLoadViewModel(imageURL: ImageURL.nature))
     private let imageLoadView2 = ImageLoadView(
-        viewModel: ImageLoadViewModel(imageURL: CuteAnimalURL.focusingCat))
+        viewModel: ImageLoadViewModel(imageURL: ImageURL.coder))
     private let imageLoadView3 = ImageLoadView(
-        viewModel: ImageLoadViewModel(imageURL: CuteAnimalURL.happyDog))
+        viewModel: ImageLoadViewModel(imageURL: ImageURL.italy))
     private let imageLoadView4 = ImageLoadView(
-        viewModel: ImageLoadViewModel(imageURL: CuteAnimalURL.restingCat))
+        viewModel: ImageLoadViewModel(imageURL: ImageURL.paris))
     private let imageLoadView5 = ImageLoadView(
-        viewModel: ImageLoadViewModel(imageURL: CuteAnimalURL.thumbsUpCat))
+        viewModel: ImageLoadViewModel(imageURL: ImageURL.thumbsUpCat))
     
     private lazy var stackView: UIStackView = {
         let stackView = UIStackView(
