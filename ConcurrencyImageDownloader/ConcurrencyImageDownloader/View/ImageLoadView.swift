@@ -37,6 +37,7 @@ class ImageLoadView: UIView {
             action: #selector(loadButtonDidTapped),
             for: .touchDown)
         button.layer.cornerRadius = 8
+        button.isSelected = false
         return button
     }()
     

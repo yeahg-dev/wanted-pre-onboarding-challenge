@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     private let imageLoadView1 = ImageLoadView(
         viewModel: ImageLoadViewModel(imageURL: ImageURL.nature))
     private let imageLoadView2 = ImageLoadView(
-        viewModel: ImageLoadViewModel(imageURL: ImageURL.coder))
+        viewModel: ImageLoadViewModel(imageURL: ImageURL.mining))
     private let imageLoadView3 = ImageLoadView(
         viewModel: ImageLoadViewModel(imageURL: ImageURL.italy))
     private let imageLoadView4 = ImageLoadView(
